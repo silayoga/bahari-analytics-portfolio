@@ -47,9 +47,8 @@ Melalui analisis tren bulanan dan kontribusi kategori bisnis (didominasi oleh Fo
 * **Optimasi Operasional:** Struktur pendapatan menunjukkan *F&B* dan *Room Rental* sebagai *core engine* bisnis. Lonjakan pendapatan pada bulan-bulan *peak season* (seperti Desember) memerlukan kesiapan infrastruktur IT berupa optimasi query database agar tidak terjadi *bottle-neck* saat beban transaksi memuncak.
 * **Manajemen Kas:** Kategori pembayaran non-tunai yang tinggi memangkas risiko *cash handling error*, namun porsi *Bon / Piutang* harus diawasi agar tidak mengganggu rasio likuiditas modal kerja harian.
 
-* ### 📊 Executive Slide Decks (Interactive HTML)
+### 📊 Executive Slide Decks (Interactive HTML)
 * 🖥️ [Buka Presentasi Tokopaedi Case Study](https://htmlpreview.github.io/?https://github.com/silayoga/bahari-analytics-portfolio/blob/main/documentation/remade_tokopaedi_presentation.html)
-* 🖥️ [Buka Presentasi Python Case Study — By Kadek Ngurah Silayoga](https://htmlpreview.github.io/?https://github.com/silayoga/bahari-analytics-portfolio/blob/main/documentation/Strategic_Data_Analytics_Portfolio.html)
-
+* 🖥️ [Buka Presentasi Python Case Study — By Kadek Ngurah Silayoga](https://htmlpreview.github.io/?https://github.com/silayoga/bahari-analytics-portfolio/blob/main/documentation/python_case_study_presentation.html)
 ---
 *Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & IT Manager*
