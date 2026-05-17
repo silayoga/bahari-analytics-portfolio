@@ -52,8 +52,9 @@ Melalui analisis tren bulanan dan kontribusi kategori bisnis (didominasi oleh Fo
 ## 📊 Executive Presentation Decks (Interactive HTML)
 *Berikut adalah salinan slide deck presentasi analitik strategis yang telah diredesain menggunakan standar visual corporate management consulting:*
 
-* 🖥️ **[Buka Live Presentasi - Tokopaedi Case Study](https://silayoga.github.io/bahari-analytics-portfolio/remade_tokopaedi_presentation.html)**
-* 🖥️ **[Buka Live Presentasi - Python Case Study (By Kadek Ngurah Silayoga)](https://silayoga.github.io/bahari-analytics-portfolio/python_case_study_presentation.html)**
+[![PDF](https://img.shields.io/badge/PDF-Python%20Case%20Study-red?logo=adobeacrobatreader)](./documentation/Python%20Data%20Analysis%20Case%20Study.pdf)
+
+[![PDF](https://img.shields.io/badge/PDF-Strategic%20Portfolio-red?logo=adobeacrobatreader)](./documentation/Strategic%20Data%20Analytics%20Portfolio.pdf)
 
 > *Catatan: Tautan resmi di atas berjalan langsung di server GitHub Pages Anda, menjamin seluruh visual Navy & Teal tereksekusi dengan aman dan lancar.*
 
