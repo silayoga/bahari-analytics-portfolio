@@ -49,7 +49,7 @@ Melalui analisis tren bulanan dan kontribusi kategori bisnis (didominasi oleh Fo
 
 * ### 📊 Executive Slide Decks (Interactive HTML)
 * 🖥️ [Buka Presentasi Tokopaedi Case Study](https://htmlpreview.github.io/?https://github.com/silayoga/bahari-analytics-portfolio/blob/main/documentation/remade_tokopaedi_presentation.html)
-* 🖥️ [Buka Presentasi Python Case Study — By Kadek Ngurah Silayoga](https://htmlpreview.github.io/?https://github.com/silayoga/bahari-analytics-portfolio/blob/main/documentation/Strategic Data Analytics Portfolio.html)
+* 🖥️ [Buka Presentasi Python Case Study — By Kadek Ngurah Silayoga](https://htmlpreview.github.io/?https://github.com/silayoga/bahari-analytics-portfolio/blob/main/documentation/Strategic_Data_Analytics_Portfolio.html)
 
 ---
 *Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & IT Manager*
