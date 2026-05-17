@@ -47,14 +47,17 @@ Melalui analisis tren bulanan dan kontribusi kategori bisnis (didominasi oleh Fo
 * **Optimasi Operasional:** Struktur pendapatan menunjukkan *F&B* dan *Room Rental* sebagai *core engine* bisnis. Lonjakan pendapatan pada bulan-bulan *peak season* (seperti Desember) memerlukan kesiapan infrastruktur IT berupa optimasi query database agar tidak terjadi *bottle-neck* saat beban transaksi memuncak.
 * **Manajemen Kas:** Kategori pembayaran non-tunai yang tinggi memangkas risiko *cash handling error*, namun porsi *Bon / Piutang* harus diawasi agar tidak mengganggu rasio likuiditas modal kerja harian.
 
----
+## 📚 Documentation
 
-## 📊 Executive Presentation Decks (Interactive HTML)
-*Berikut adalah salinan slide deck presentasi analitik strategis yang telah diredesain menggunakan standar visual corporate management consulting:*
+### 📄 PDF Reports
+| Dokumen | | |
+|---------|--|--|
+| 🐍 Python Data Analysis Case Study | [![View](https://img.shields.io/badge/View-Online-blue)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/silayoga/bahari-analytics-portfolio/main/documentation/Python%20Data%20Analysis%20Case%20Study.pdf) | [![Download](https://img.shields.io/badge/Download-PDF-red?logo=adobeacrobatreader)](./documentation/Python%20Data%20Analysis%20Case%20Study.pdf) |
+| 📊 Strategic Data Analytics Portfolio | [![View](https://img.shields.io/badge/View-Online-blue)](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/silayoga/bahari-analytics-portfolio/main/documentation/Strategic%20Data%20Analytics%20Portfolio.pdf) | [![Download](https://img.shields.io/badge/Download-PDF-red?logo=adobeacrobatreader)](./documentation/Strategic%20Data%20Analytics%20Portfolio.pdf) |
 
-[![PDF](https://img.shields.io/badge/PDF-Python%20Case%20Study-red?logo=adobeacrobatreader)](./documentation/Python%20Data%20Analysis%20Case%20Study.pdf)
-
-[![PDF](https://img.shields.io/badge/PDF-Strategic%20Portfolio-red?logo=adobeacrobatreader)](./documentation/Strategic%20Data%20Analytics%20Portfolio.pdf)
+### 🖥️ Interactive Presentations
+- 🔗 [Tokopaedi Case Study](https://silayoga.github.io/bahari-analytics-portfolio/remade_tokopaedi_presentation.html)
+- 🔗 [Python Case Study](https://silayoga.github.io/bahari-analytics-portfolio/python_case_study_presentation.html)
 
 > *Catatan: Tautan resmi di atas berjalan langsung di server GitHub Pages Anda, menjamin seluruh visual Navy & Teal tereksekusi dengan aman dan lancar.*
 
