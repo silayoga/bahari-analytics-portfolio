@@ -56,6 +56,6 @@ Melalui analisis tren bulanan dan kontribusi kategori bisnis (didominasi oleh Fo
 * 🖥️ **[Buka Live Presentasi - Python Case Study (By Kadek Ngurah Silayoga)](https://silayoga.github.io/bahari-analytics-portfolio/python_case_study_presentation.html)**
 
 > *Catatan: Klik tautan resmi di atas untuk membuka slide interaktif secara real-time langsung dari browser Anda tanpa kendala blank page.*
-> 
+
 ---
 *Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & IT Manager*
