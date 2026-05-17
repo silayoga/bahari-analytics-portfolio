@@ -1,0 +1,83 @@
+# 📘 IRS Back Office System - Technical Manual Book
+> **Integrated Restaurant System (IRS)** > *Developed by Esa Interactive Software Solution* > *Documented & Managed by Kadek Ngurah Silayoga — Senior IT Specialist & IT Manager*
+
+---
+
+## 📌 Daftar Isi / Table of Contents
+1. [Pendahuluan & Akses Program](#1-pendahuluan--akses-program)
+2. [Arsitektur Menu Utama (Main Interface)](#2-arsitektur-menu-utama-main-interface)
+3. [Panduan Operasional Tombol Kontrol System](#3-panduan-operasional-tombol-kontrol-system)
+4. [Part 0: Konfigurasi Parameter & Setting Awal](#4-part-0-konfigurasi-parameter--setting-awal)
+5. [Part 1: Modul Marketing (Manajemen Diskon & Voucher)](#5-part-1-modul-marketing-manajemen-diskon--voucher)
+6. [Part 2: Modul POS (Point of Sales Settings)](#6-part-2-modul-pos-point-of-sales-settings)
+7. [Part 3: Modul Personalia (Karyawan & Otoritas)](#7-part-3-modul-personalia-karyawan--otoritas)
+8. [Part 4: Modul Persediaan & Gudang (Inventory Management)](#8-part-4-modul-persediaan--gudang-inventory-management)
+9. [Part 5: Modul Accounting & Pembelian (AP/AR Engine)](#9-part-5-modul-accounting--pembelian-apar-engine)
+10. [Part 6: Modul General Cashier (Manajemen Kas & Bank)](#10-part-6-modul-general-cashier-manajemen-kas--bank)
+
+---
+
+## 1. Pendahuluan & Akses Program
+Aplikasi IRS Back Office dijalankan melalui komputer desktop untuk mengontrol seluruh operasional manajemen outlet.
+* **Cara Akses:** Klik kiri 2x pada icon shortcut **IRS** di Desktop, atau klik kanan lalu pilih **Open**.
+* **Autentikasi Keamanan:** Masukkan `User ID` dan `Password` pada Login Form yang muncul, lalu klik **Login**.
+
+---
+
+## 2. Arsitektur Menu Utama (Main Interface)
+Sistem IRS Back Office memisahkan fungsi kontrol global dengan fungsi operasional melalui dua klasifikasi menu utama:
+
+### A. Menu File (Global Settings)
+Terletak pada bagian kiri atas program, mencakup konfigurasi sistem keseluruhan:
+* `System` | `Master Data` | `No Seri Pajak` | `Proses` | `Preview` | `Laporan` | `Utility`.
+
+### B. Menu Toolbar (Modul Operasional)
+Terletak strategis pada bagian tengah halaman utama berupa tombol pintas cepat:
+1. **General Cashier:** Modul transaksi keuangan, kas, dan bank.
+2. **Accounting:** Mengelola piutang (*Account Receivable*) dan hutang (*Account Payable*).
+3. **Penjualan:** Menangani transaksi penjualan barang ke pihak luar serta retur penjualan.
+4. **Pembelian:** Mengatur Purchase Order (PO), penerimaan barang, dan retur pembelian.
+5. **Persediaan:** Pusat mutasi inventaris, transfer stok antar gudang, hingga stock opname.
+6. **Aktiva Tetap:** Manajemen aset perusahaan dan kalkulasi penyusutan otomatis.
+7. **Anggaran:** Memasukkan rencana anggaran keuangan atau perencanaan berkala.
+8. **Personalia:** Database karyawan pengelola sistem IRS & POS.
+9. **POS:** Pengaturan teknis menu, meja, layout, dan payment bank penunjang mesin POS.
+10. **Marketing:** Pusat kontrol diskon, promo member, dan voucher belanja.
+
+---
+
+## 3. Panduan Operasional Tombol Kontrol System
+Setiap modul di dalam sistem IRS menggunakan interface tombol aksi standar berikut:
+* ➕ **Add:** Membuat rekaman data transaksi baru.
+* ✏️ **Edit:** Mengubah data yang sudah tersimpan di database.
+* ❌ **Delete:** Menghapus data dari sistem.
+* 💾 **Save:** Menyimpan hasil penambahan data baru maupun pengubahan data.
+* **Cancel:** Membatalkan proses penginputan atau pengeditan data berjalan.
+* 🔍 **Find:** Melakukan pencarian data lama di database.
+* 🖨️ **Print:** Membuka jendela *Print Preview* dan mencetak laporan transaksi aktif.
+* 🚪 **Exit:** Menutup modul aktif dan kembali ke dashboard utama.
+
+---
+
+## 4. Part 0: Konfigurasi Parameter & Setting Awal
+Sebelum sistem dapat digunakan untuk transaksi harian, administrator wajib melengkapi konfigurasi dasar berikut:
+
+### 0.1 Parameter Periode Aktif
+* **Akses:** `Menu File > System > Parameter`.
+* **Fungsi:** Menentukan outlet/kantor aktif serta mengunci periode transaksi harian (Bulan/Tahun). Data yang ditarik oleh sistem akan menyesuaikan secara ketat dengan parameter ini.
+
+### 0.2 Konfigurasi User & Hak Akses (User Maintenance)
+* **Akses:** `Menu File > System > User Maintenance`.
+* **Langkah Kerja:**
+  1. Klik tombol **Add User**.
+  2. Isi `User ID`, `Nama`, `New Password`, dan `Verify Password`.
+  3. Tentukan klasifikasi tingkat akun pada kolom `User Type` (*Supervisor*, *User*, atau *Administrator*).
+  4. Kaitkan dengan data karyawan di modul personalia pada dropdown `Employee`.
+  5. Berikan tanda centang ($\checkmark$) pada tabel **Otoritas** sesuai batas wewenang kerja yang diperbolehkan, lalu klik **Save**.
+
+---
+
+## 5. Part 1: Modul Marketing (Manajemen Diskon & Voucher)
+Berguna untuk mengatur daya saing penjualan restoran di sisi POS.
+
+* **Member & Diskon Member:** Pengaturan kartu member baru dan persentase potongan harga terikat hari (Senin -
