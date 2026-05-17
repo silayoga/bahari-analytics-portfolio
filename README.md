@@ -1,47 +1,6 @@
-<img width="1584" height="785" alt="image" src="https://github.com/user-attachments/assets/4450483a-c861-47a1-92f0-f29d1e25015f" />## Bahari Analytics Portfolio
-
-Proyek ini mendemonstrasikan kapabilitas analisis data end-to-end dari sistem My Horeca (VB6) ke Cloud Ecosystem.
-
 # Bahari Analytics Portfolio 🚀
 
-Proyek ini mendemonstrasikan kapabilitas analisis data end-to-end, mulai dari ekstraksi sistem legacy, migrasi arsitektur ke Cloud Ecosystem (Supabase/PostgreSQL), hingga visualisasi analitik tingkat lanjut untuk kebutuhan eksekutif.
-
----
-
-## 🛠️ Tech Stack & Arsitektur Sistem
-* **Core Database:** Cloud Supabase (PostgreSQL Engine)
-* **Data Processing & Analytics:** Python (Pandas, SQLAlchemy)
-* **Data Visualization Engine:** Seaborn, Matplotlib, & Google Looker Studio
-* **Development Environment:** Google Colab Sandbox Integration
-
----
-
-## 📂 Dokumentasi Proyek & Komponen Utama
-
-### 1. Data Visualisasi & Jupyter Notebook (`Interactive`)
-Analisis kontribusi pendapatan berdasarkan metode pembayaran yang diproses secara dinamis menggunakan Python. Notebook ini dilengkapi dengan fitur arsitektur hibrida (*local fallback system*) untuk menjaga integritas eksekusi dalam lingkungan sandbox.
-
-* **Buka Script Interaktif:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/silayoga/bahari-analytics-portfolio/blob/main/New_Bahari_Analitycs.ipynb)
-* **File Mentah:** [Lihat Notebook di Sini](New_Bahari_Analitycs.ipynb)
-
-### 2. Business Intelligence Dashboard (`Executive Report`)
-Dashboard interaktif yang dirancang untuk kebutuhan manajemen puncak (*C-Level Executive*) guna memantau metrik performa sales, tren transaksi, dan distribusi pembayaran secara real-time.
-
-* **Tautan Dashboard:** [Buka Google Looker Studio Report](https://lookerstudio.google.com/reporting/UBAH_DENGAN_ID_LAPORAN_BAPAK) *(Pastikan hak akses tautan sudah diatur ke Public/Anyone with link can view)*
-
----
-
-## 📈 Fitur Analisis Utama dalam Proyek
-1. **Automated Data Formatting:** Konversi otomatis nilai angka sales mentah ke format representasi mata uang finansial yang bersih (Format Rupiah Terbaca).
-2. **Hybrid Connectivity System:** Penanganan error tingkat jaringan (*network unreachable*) menggunakan metode repositori sandbox lokal agar alur analitik bisnis tidak terputus.
-3. **Data Aggregation:** Pengelompokan data transaksi transaksional secara granular berdasarkan jenis pembayaran (Cash, Debit Card, Credit Card, dll).
-
-
-
-
-# Bahari Analytics Portfolio 🚀
-
-Proyek ini mendemonstrasikan kapabilitas analisis data end-to-end, mulai dari ekstraksi sistem legacy (VB6), migrasi arsitektur ke Cloud Ecosystem (Supabase/PostgreSQL), hingga visualisasi analitik tingkat lanjut untuk kebutuhan eksekutif manajemen puncak (C-Level).
+Proyek ini mendemonstrasikan kapabilitas analisis data end-to-end, mulai dari ekstraksi sistem legacy (VB6), migrasi arsitektur ke Cloud Ecosystem (Supabase/PostgreSQL), hingga visualisasi analitik tingkat lanjut untuk kebutuhan eksekutif manajemen puncak (C-Level) dan IT Auditing.
 
 ---
 
@@ -56,27 +15,37 @@ Proyek ini mendemonstrasikan kapabilitas analisis data end-to-end, mulai dari ek
 ## 📂 Dokumentasi Proyek & Komponen Utama
 
 ### 1. Data Visualisasi & Jupyter Notebook (`Interactive`)
-Notebook ini berisi dua modul analisis utama yang dilengkapi dengan fitur arsitektur hibrida (*local fallback system*) untuk menjaga integritas eksekusi dalam lingkungan sandbox Google Colab:
-* **Modul A:** Distribusi Pendapatan Berdasarkan Metode Pembayaran (Format Keuangan Rp Terbaca).
-* **Modul B (Advanced):** Analisis Tren Jam Padat Operasional (*Hourly Peak Trend*) & Analisis Rasio Risiko Arus Kas (*Cash Flow Risk Composition*).
+Notebook ini dirancang menggunakan arsitektur hibrida (*local fallback system*) untuk memastikan integritas eksekusi sistem tetap berjalan optimal meskipun port cloud diblokir oleh infrastruktur sandbox lingkungan pengeksekusi:
+
+* **Modul A: Distribusi Pendapatan Berdasarkan Metode Pembayaran**
+  * *Penjelasan:* Analisis makro aliran kas masuk (*cash inflow*) berdasarkan instrumen pembayaran (Cash, Debit, Credit, Bon/Piutang, Compliment). Bermanfaat untuk memetakan likuiditas harian dan mengukur ketergantungan operasional pada uang tunai fisik vs non-tunai.
+* **Modul B: Analisis Jam Operasional & Manajemen Risiko Arus Kas**
+  * *Penjelasan:* Memetakan produktivitas penjualan berbasis jam transaksi (24-hour format) untuk mengidentifikasi fenomena *double-peak operational hours*. Dilengkapi dengan klasifikasi kesehatan dana (*Cash Flow Risk Composition*) guna memisahkan dana likuid seketika dengan risiko tertunda (piutang).
+* **Modul C (Security & Audit): IT Audit Dashboard (Void Rate Anomaly)**
+  * *Penjelasan:* Implementasi *Internal Fraud Control* berbasis statistik. Sistem menghitung rasio batalan nota (*Void Rate*) dinamis per operator kasir asli dari database untuk mendeteksi anomali perilaku yang melewati ambang batas aman (Threshold 2.0%).
+* **Modul D (Executive Strategic): Analisis Departemen & Tren Musiman (Seasonality)**
+  * *Penjelasan:* Visualisasi kontribusi omzet per departemen (F&B vs Room Rental) dikombinasikan dengan tren pertumbuhan penjualan bulanan (Month-over-Month Growth) untuk mendeteksi pola musiman (*peak & low seasons*).
 
 * **Buka Script Interaktif:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/silayoga/bahari-analytics-portfolio/blob/main/New_Bahari_Analitycs.ipynb)
 * **File Mentah:** [Lihat Notebook di Sini](New_Bahari_Analitycs.ipynb)
 
 ### 2. Business Intelligence Dashboard (`Executive Report`)
 Dashboard interaktif yang dirancang untuk memantau metrik performa sales, tren transaksi harian, dan kesehatan kas secara real-time.
-
-* **Tautan Dashboard:** [Buka Google Looker Studio Report](https://lookerstudio.google.com/reporting/UBAH_DENGAN_ID_LAPORAN_BAPAK) *(Pastikan hak akses tautan sudah diatur ke Public/Anyone with link can view)*
-
----
-
-## 📈 Key Business Insights yang Dihasilkan
-1. **Operational Efficiency:** Mendeteksi pola *double-peak* pada jam operasional untuk optimasi penugasan kru kasir dan server di lantai operasional.
-2. **Financial Risk Mitigation:** Mengklasifikasikan jenis pendapatan secara otomatis ke dalam kategori tingkat likuiditas dana (*Seketika*, *Tertunda/Piutang*, dan *Non-Revenue*) untuk menjaga stabilitas *cash flow* perusahaan.
-3. **Hybrid Connectivity Architecture:** Implementasi penanganan error tingkat jaringan (*network unreachable*) di Python untuk menjamin ketersediaan sistem laporan meskipun port outbound cloud diblokir oleh infrastruktur lingkungan pengeksekusi.
+* **Tautan Dashboard:** [Buka Google Looker Studio Report](https://lookerstudio.google.com/reporting/UBAH_DENGAN_ID_LAPORAN_BAPAK)
 
 ---
-*Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & Management*
+
+## 📈 Bedah Logika & Key Business Insights
+
+### A. Metodologi Deteksi Anomali Void (IT Security & Fraud Control)
+Asumsi tersembunyi dalam operasional POS hospitality adalah setiap tindakan *Void* (pembatalan transaksi) merupakan kesalahan input manusia. Namun, secara kritis, tingginya angka pembatalan pada operator tertentu dapat mengindikasikan celah manipulasi kas (*pencurian terselubung setelah struk dicetak*).
+* **Formula Kontrol:** $$\text{Void Rate (\%)} = \left( \frac{\text{Total Transaksi Void}}{\text{Total Transaksi Sukses}} \right) \times 100$$
+* **Rekomendasi Struktur:** Operator dengan *Void Rate* > 2.0% (misalnya: `Ketut Kasir`) diprioritaskan untuk audit silang log sistem fisik (*CCTV vs POS Timestamp*) ketimbang sekadar *retraining*.
+
+### B. Sinkronisasi Kapasitas vs Pola Musiman (Revenue Strategy)
+Melalui analisis tren bulanan dan kontribusi kategori bisnis (didominasi oleh Food & Beverage), manajemen dapat mengambil keputusan taktis berbasis data (*Data-Driven Decision*):
+* **Optimasi Operasional:** Struktur pendapatan menunjukkan *F&B* dan *Room Rental* sebagai *core engine* bisnis. Lonjakan pendapatan pada bulan-bulan *peak season* (seperti Desember) memerlukan kesiapan infrastruktur IT berupa optimasi query database agar tidak terjadi *bottle-neck* saat beban transaksi memuncak.
+* **Manajemen Kas:** Kategori pembayaran non-tunai yang tinggi memangkas risiko *cash handling error*, namun porsi *Bon / Piutang* harus diawasi agar tidak mengganggu rasio likuiditas modal kerja harian.
 
 ---
-*Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & Management*
+*Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & IT Manager*
