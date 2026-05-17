@@ -1,0 +1,92 @@
+# 🛒 IRS Point Of Sales (POS) - Technical Manual Book
+> **Front-End Terminal System (E-POS)** > *Built with Visual Basic 6.0 & MS SQL Express 2005* > *Documented & Managed by Kadek Ngurah Silayoga — Senior IT Specialist & IT Manager*
+
+---
+
+## 📌 Daftar Isi / Table of Contents
+1. [Spesifikasi Sistem & Arsitektur Legacy Stack](#1-spesifikasi-sistem--arsitektur-legacy-stack)
+2. [Prosedur Inisialisasi & Login Kasir](#2-prosedur-inisialisasi--login-kasir)
+3. [Arsitektur Antarmuka Utama (Main POS Menu)](#3-arsitektur-antarmuka-utama-main-pos-menu)
+4. [Siklus Alur Kerja Transaksi POS (Transaction Pipeline)](#4-siklus-alur-kerja-transaksi-pos-transaction-pipeline)
+5. [Prosedur Modifikasi Transaksi (Void, Split, & Move Table)](#5-prosedur-modifikasi-transaksi-void-split--move-table)
+6. [Modul Pelaporan & Prosedur Closing Cashier](#6-modul-pelaporan--prosedur-closing-cashier)
+
+---
+
+## 1. Spesifikasi Sistem & Arsitektur Legacy Stack
+Sistem Front-End POS ini dirancang untuk berjalan secara optimal pada terminal kasir dengan reliabilitas tinggi melalui dependensi komponen berikut:
+
+### A. Prasyarat Perangkat Keras (Hardware Minimal)
+* **Processor:** Intel Pentium 4 atau lebih tinggi.
+* **Memory & Storage:** RAM 128 MB dengan sisa ruang Hard Disk minimal 10 GB.
+* **Periferal Pendukung:** Printer Dot Matrix (Dapur & Kasir), Cash Drawer (Laci Uang Otomatis), dan Magnetic Swipe Card Reader untuk autentikasi user.
+
+### B. Dependensi Perangkat Lunak (Software Stack)
+* **Core Engine:** Microsoft Visual Basic V 6.0
+* **Komponen Kustom (.OCX / .DLL):** `aBox.OCX`, `azikro-menuku.ocx`, `cryptkci.dll`, `Label3DControl.ocx`, `Progressbarex.ocx`, `Xpbutton.ocx`, dan `True DBGrid v8`.
+* **Reporting Engine:** Crystal Report V.8.5
+* **Local Database Engine:** Microsoft SQL Express 2005
+
+---
+
+## 2. Prosedur Inisialisasi & Login Kasir
+Untuk menjaga akuntabilitas finansial dan keamanan, setiap sesi kasir wajib diikat dengan identitas operator POS.
+1. Jalankan shortcut **POS** langsung dari Desktop Windows terminal kasir.
+2. Sistem akan menampilkan layar utama berupa perintah: **"Swipe Your Card"**.
+3. **Mekanisme Otentikasi:** Operator menggesekkan kartu ID magnetik (*Swipe Card*) pada card reader untuk memicu proses verifikasi hak akses ke database SQL lokal. Setelah kartu tervalidasi, sistem otomatis membuka form menu utama.
+
+---
+
+## 3. Arsitektur Antarmuka Utama (Main POS Menu)
+Halaman utama POS menyajikan kontrol operasional taktis yang dikelompokkan menjadi 3 bagian fungsional:
+* **Blok Order Kamar/Meja (Room/Table Area):** Menampilkan representasi visual tata letak meja makan atau ruang karaoke untuk memantau status hunian (*occupancy*).
+* **Blok Fungsi Kontrol (Aksi):** Tombol-tombol eksekusi harian seperti `ORDER`, `PAYMENT`, `MOVE TABLE`, `SPLIT BILL`, `VOID`, `CASHIER REPORT`, dan `CLOSING`.
+* **Blok Informasi Kasir:** Menampilkan identitas operator aktif, nomor shift berjalan, serta tanggal sistem server.
+
+---
+
+## 4. Siklus Alur Kerja Transaksi POS (Transaction Pipeline)
+
+### 4.1 Proses Pencatatan Pesanan (Taking Order)
+1. Pilih nomor meja makan atau nomor ruangan target pada peta layout visual.
+2. Klik tombol **ORDER** untuk membuka menu katalog produk.
+3. Katalog dibagi berdasarkan tab kategori menu (*FOOD*, `BEVERAGES`, `MERCHANDISE`, `OTHERS`). Klik pada nama menu untuk menambahkan jumlah pesanan ke keranjang struk belanja.
+4. **Kitchen Ticket Routing:** Klik tombol **SAVE**. Sistem secara otomatis akan memproses data ke antrean database dan menembakkan perintah cetak langsung ke printer dot-matrix yang berada di area dapur/bar untuk pemrosesan hidangan.
+
+### 4.2 Proses Penyelesaian Pembayaran (Bill Settlement)
+1. Pilih meja/ruangan yang statusnya sedang terisi (*occupied*).
+2. Klik tombol **PAYMENT** untuk memunculkan ringkasan tagihan finansial.
+3. **Opsi Multi-Payment System:**
+   * **CASH:** Masukkan jumlah nominal uang tunai fisik yang diserahkan pelanggan. Sistem otomatis menghitung nilai kembalian (*Change Amount*) dan memicu Cash Drawer untuk terbuka.
+   * **CARD (Debit/Credit):** Masukkan jenis bank penyedia EDC, nomor kartu, serta nomor otorisasi transaksi bank.
+   * **COMPLIMENT / CHARGE TO ROOM:** Digunakan khusus untuk fasilitas internal manajemen atau tamu hotel (memerlukan hak otorisasi akun *Supervisor*).
+4. Klik **OK** untuk mencetak struk transaksi final bagi pelanggan.
+
+---
+
+## 5. Prosedur Modifikasi Transaksi (Void, Split, & Move Table)
+
+### 5.1 Mekanisme Proteksi Void (Pembatalan Menu/Nota)
+*Sebagai bagian dari IT Security & Internal Fraud Control, fitur Void diproteksi secara ketat:*
+1. Pilih item atau meja aktif yang ingin dianulir, lalu klik tombol **VOID**.
+2. Sistem akan mengeluarkan jendela konfirmasi wajib: **"Swipe Card Supervisor"**.
+3. Gesekkan kartu dengan hak akses level *Supervisor* atau *Manager* untuk menyetujui pembatalan. Langkah ini dicatat secara detail ke dalam tabel audit log database untuk dievaluasi pada dashboard analitik *Back Office*.
+
+### 5.2 Pemindahan Meja (Move Table)
+Digunakan jika pelanggan meminta pindah lokasi. Klik tombol **MOVE TABLE**, pilih nomor meja asal, kemudian pilih nomor meja tujuan baru yang masih kosong (*Vacant*). Seluruh keranjang data belanja akan dimigrasikan otomatis oleh SQL engine tanpa mengubah nomor struk.
+
+### 5.3 Pemisahan Tagihan (Split Bill)
+Digunakan jika pelanggan di satu meja ingin membayar secara terpisah. Klik tombol **SPLIT BILL**, pilih item menu tertentu yang ingin dipisah, lalu pindahkan ke kolom struk baru. Sistem akan menerbitkan *sub-bill* baru yang siap diproses ke form pembayaran terpisah.
+
+---
+
+## 6. Modul Pelaporan & Prosedur Closing Cashier
+
+### 6.1 Cetak Laporan Shift (Print Cashier Report)
+Fasilitas audit harian untuk melihat performa kasir berjalan. Klik tombol **CASHIER REPORT**, tentukan parameter tanggal cetak (default mengikuti tanggal aktif server), lalu pilih jenis laporan (Rekapitulasi Global atau Detail per Item) untuk dicetak via printer kasir.
+
+### 6.2 Prosedur Penutupan Kasir (Print Closing Cashier)
+*Prosedur wajib pada setiap pergantian shift atau akhir jam operasional outlet:*
+1. Pastikan seluruh transaksi gantung pada meja/ruangan telah diselesaikan (*Fully Paid*).
+2. Klik tombol **CLOSING** pada menu utama.
+3. Sistem akan meminta verifikasi otorisasi akhir dengan perintah
