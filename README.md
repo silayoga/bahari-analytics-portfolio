@@ -36,5 +36,47 @@ Dashboard interaktif yang dirancang untuk kebutuhan manajemen puncak (*C-Level E
 2. **Hybrid Connectivity System:** Penanganan error tingkat jaringan (*network unreachable*) menggunakan metode repositori sandbox lokal agar alur analitik bisnis tidak terputus.
 3. **Data Aggregation:** Pengelompokan data transaksi transaksional secara granular berdasarkan jenis pembayaran (Cash, Debit Card, Credit Card, dll).
 
+
+
+
+# Bahari Analytics Portfolio 🚀
+
+Proyek ini mendemonstrasikan kapabilitas analisis data end-to-end, mulai dari ekstraksi sistem legacy (VB6), migrasi arsitektur ke Cloud Ecosystem (Supabase/PostgreSQL), hingga visualisasi analitik tingkat lanjut untuk kebutuhan eksekutif manajemen puncak (C-Level).
+
+---
+
+## 🛠️ Tech Stack & Arsitektur Sistem
+* **Core Database:** Cloud Supabase (PostgreSQL Engine)
+* **Data Processing & Analytics:** Python (Pandas, NumPy, SQLAlchemy)
+* **Data Visualization Engine:** Seaborn, Matplotlib, & Google Looker Studio
+* **Development Environment:** Google Colab Sandbox Integration
+
+---
+
+## 📂 Dokumentasi Proyek & Komponen Utama
+
+### 1. Data Visualisasi & Jupyter Notebook (`Interactive`)
+Notebook ini berisi dua modul analisis utama yang dilengkapi dengan fitur arsitektur hibrida (*local fallback system*) untuk menjaga integritas eksekusi dalam lingkungan sandbox Google Colab:
+* **Modul A:** Distribusi Pendapatan Berdasarkan Metode Pembayaran (Format Keuangan Rp Terbaca).
+* **Modul B (Advanced):** Analisis Tren Jam Padat Operasional (*Hourly Peak Trend*) & Analisis Rasio Risiko Arus Kas (*Cash Flow Risk Composition*).
+
+* **Buka Script Interaktif:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/silayoga/bahari-analytics-portfolio/blob/main/New_Bahari_Analitycs.ipynb)
+* **File Mentah:** [Lihat Notebook di Sini](New_Bahari_Analitycs.ipynb)
+
+### 2. Business Intelligence Dashboard (`Executive Report`)
+Dashboard interaktif yang dirancang untuk memantau metrik performa sales, tren transaksi harian, dan kesehatan kas secara real-time.
+
+* **Tautan Dashboard:** [Buka Google Looker Studio Report](https://lookerstudio.google.com/reporting/UBAH_DENGAN_ID_LAPORAN_BAPAK) *(Pastikan hak akses tautan sudah diatur ke Public/Anyone with link can view)*
+
+---
+
+## 📈 Key Business Insights yang Dihasilkan
+1. **Operational Efficiency:** Mendeteksi pola *double-peak* pada jam operasional untuk optimasi penugasan kru kasir dan server di lantai operasional.
+2. **Financial Risk Mitigation:** Mengklasifikasikan jenis pendapatan secara otomatis ke dalam kategori tingkat likuiditas dana (*Seketika*, *Tertunda/Piutang*, dan *Non-Revenue*) untuk menjaga stabilitas *cash flow* perusahaan.
+3. **Hybrid Connectivity Architecture:** Implementasi penanganan error tingkat jaringan (*network unreachable*) di Python untuk menjamin ketersediaan sistem laporan meskipun port outbound cloud diblokir oleh infrastruktur lingkungan pengeksekusi.
+
+---
+*Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & Management*
+
 ---
 *Maintained by Kadek Ngurah Silayoga — Senior IT Specialist & Management*
